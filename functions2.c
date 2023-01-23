@@ -92,9 +92,7 @@ int print_non_printable(va_list types, char buffer[],
  * Return: Numbers of chars printed
  */
 int print_reverse(va_list types, char buffer[],
-
-			int flags, int width, int precision, int size)
-
+		int flags, int width, int precision, int size)
 {
 	char *str;
 	int i, count = 0;
@@ -103,7 +101,9 @@ int print_reverse(va_list types, char buffer[],
 	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(size);
-	str = va_arg(types, char *)
+
+	str = va_arg(types, char *);
+
 		if (str == NULL)
 		{
 			UNUSED(precision);
